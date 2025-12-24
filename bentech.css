@@ -148,17 +148,20 @@ body {
   align-self: flex-start;
 }
 
-  .btn:active {
+  .btn:active,
+  .submit-btn:active {
   transform: translateY(1px);
     }
 
 @media (hover: hover) {
-  .btn:hover{
+  .btn:hover,
+  .submit-btn:hover {
     transform: translateY(-3px);
     box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
   }
 }
-  .btn:focus {
+  .btn:focus,
+  .submit-btn:focus {
   box-shadow: none;
   transform: translateY(0);
 }
@@ -360,6 +363,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
