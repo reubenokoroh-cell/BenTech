@@ -9,7 +9,8 @@
 * { 
   margin: 0; 
   padding: 0; 
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -136,6 +137,8 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: none; /* Start with no shadow */
   transform: translateY(0);
+  cursor: pointer;
+}
 
 .submit-btn:hover {
   transform: translateY(-3px);
@@ -148,7 +151,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
     }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .btn:hover,
   .submit-btn:hover {
     transform: translateY(-3px);
@@ -357,6 +360,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
