@@ -3,4 +3,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
   });
+
+});
+
+document.querySelectorAll('.btn, .submit-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.blur(); // Removes focus/hover state
+  });
 });
