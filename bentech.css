@@ -140,6 +140,14 @@ body {
   box-shadow: 0 10px 20px rgba(2, 207, 128, 0.3); 
 }
 
+@media (hover: hover) {
+  .btn:hover,
+  .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
+  }
+}
+  
 /* Sections */
 .section {
   background-color: #000e23;
@@ -351,5 +359,6 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
