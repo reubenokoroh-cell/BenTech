@@ -137,7 +137,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: none; /* Start with no shadow */
   transform: translateY(0);
-  cursor: pointer;
+  
 }
 
 .submit-btn:hover {
@@ -151,7 +151,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
     }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) {
   .btn:hover,
   .submit-btn:hover {
     transform: translateY(-3px);
@@ -360,6 +360,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
