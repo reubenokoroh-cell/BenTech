@@ -127,7 +127,6 @@ body {
 }
 
 .btn {
-  dislay: block;
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
   padding: 1.4rem 1.5rem;
@@ -311,7 +310,6 @@ body {
 }
 
 .submit-btn {
-  display: block;
   align-self: flex-start;
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
@@ -379,6 +377,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
