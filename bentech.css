@@ -76,6 +76,7 @@ body {
   .section h2 { 
     font-size: 2.4rem; 
   }
+  .about-content {
   
 }
 /* Hero */
@@ -132,11 +133,26 @@ body {
   font-weight: 600;
   margin: 0.5rem;
   transition: transform 0.3s, box-shadow 0.3s;
+  outline: online;
 }
 
 .btn:hover { 
   transform: translateY(-3px); 
   box-shadow: 0 10px 20px rgba(2, 207, 128, 0.3); 
+}
+
+  /* Apply hover lift only on devices with real hover capability */
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(2, 207, 128, 0.3);
+  }
+}
+
+/* For touch devices - use a subtle tap feedback instead */
+.btn:active {
+  transform: translateY(1px); /* Slight press down */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Sections */
@@ -192,6 +208,9 @@ body {
   margin: 0 auto; 
   font-size: 1.2rem; 
   text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;  
+  -ms-hyphens: auto;
 }
 
 /* Service Icons */
@@ -347,3 +366,4 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
