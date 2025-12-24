@@ -219,9 +219,7 @@ body {
   margin: 0 auto; 
   font-size: 1.2rem; 
   text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;  
-  -ms-hyphens: auto;
+  text-justify: inner-word;
 }
 
 /* Service Icons */
@@ -361,6 +359,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
