@@ -6,11 +6,11 @@
   --secondary: #888888;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+* { 
+  margin: 0; 
+  padding: 0; 
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; /* Removes iOS tap highlight */
+ 
 }
 
 body {
@@ -23,25 +23,28 @@ body {
 
 /* Navbar */
 .navbar {
-  position: fixed;
+  display: flex;
   bottom: 3rem;
+  width: max-content;
+  display: block;
   left: 50%;
   transform: translateX(-50%);
-  width: max-content;
   background: rgba(31, 30, 30, 0.7);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   border-radius: 3rem;
-  padding: 0.7rem 1.7rem;
-  display: flex;
-  gap: 0.8rem;
   z-index: 2;
+  padding: 0.7rem 1.7rem;
+  position: fixed;
+  gap: 0.8rem;
+  display: flex;
 }
 
 .nav-links {
   display: flex;
   gap: 2.5rem;
   list-style: none;
+  
 }
 
 .nav-link {
@@ -50,17 +53,34 @@ body {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 50px;
+  width: 30px;
   height: 50px;
 }
 
-.nav-link:hover,
-.nav-link.active {
+
+.nav-link:hover {
+ 
   opacity: 1;
   transform: scale(1.2);
 }
 
+.nav-link.active {
+  
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+  .hero-content p {               /* Fixed selector from h1 to p (your hero title is <p>) */
+    font-size: 3.5rem; 
+  }
+  .section h2 { 
+    font-size: 2.4rem; 
+  }
+  .about-content {
+  
+}
 /* Hero */
 .hero {
   height: 100vh;
@@ -70,76 +90,86 @@ body {
   text-align: center;
   padding-top: 10vh;
   margin-top: 50px;
+  
 }
 
-.hero-content p {
-  font-size: 4rem;
-  margin: 1.2rem 0 1.5rem;
-  font-weight: 900;
+.hero-content p { 
+  font-size: 4rem; 
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight:900;
 }
 
-.hero-content .ben { color: #ffffff; }
-.hero-content .tech { color: #02b571; }
+.hero-content .ben {
+  color: #ffffff;
+  font-weight:inherit;
+}
 
-.hero-content h3 {
+.hero-content .tech {
+  color: #02b571;
+  font-weight:inherit;
+}
+
+.hero-content h3 { 
+  margin-bottom: 3rem; 
+  margin-top: 0;
   font-size: 1.5rem;
   color: #c6c6c6;
   font-weight: 550;
-  margin-bottom: 3rem;
+
+  
 }
 
 .hero-content h2 {
-  font-size: 20px;
+ font-size: 20px;
   color: #c6c6c6;
   font-weight: 400;
 }
 
-/* Unified Button Styles – ALL buttons look and behave the same */
 .btn,
 .submit-btn {
-  display: block;
-  width: fit-content;
-  min-width: 180px;
-  margin: 1rem auto;
-  padding: 1.4rem 1.5rem;
+  dislay: block;
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
-  font-weight: 600;
-  font-size: 1rem;
+  padding: 1.4rem 1.5rem;
+  font-size:1rem;
   text-align: center;
-  text-decoration: none;
-  border: none;
   border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0.5rem;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: none;
+  box-shadow: none; /* Start with no shadow */
   transform: translateY(0);
+  
 }
 
-/* Press effect – shows on tap, disappears immediately */
-.btn:active,
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+}
+}
+  .btn:active,
 .submit-btn:active {
-  transform: translateY(2px);
-  box-shadow: 0 6px 12px rgba(2, 207, 128, 0.4);
-}
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+    }
 
-/* Hover effect ONLY on desktop (mouse) */
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) {
   .btn:hover,
   .submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(2, 207, 128, 0.3);
+    box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
   }
 }
-
-/* Prevent stuck shadow or outline on focus (mobile fix) */
-.btn:focus,
+  .btn:focus,
 .submit-btn:focus {
-  outline: none !important;
+  outline: none;
   box-shadow: none !important;
   transform: translateY(0) !important;
 }
-
+  
 /* Sections */
 .section {
   background-color: #000e23;
@@ -147,9 +177,9 @@ body {
   text-align: center;
 }
 
-.section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 3rem;
+.section h2 { 
+  font-size: 2.8rem; 
+  margin-bottom: 3rem; 
 }
 
 /* Grids */
@@ -170,44 +200,82 @@ body {
   padding: 2rem;
   border-radius: 12px;
   transition: transform 0.3s;
+  
+}
+
+.project-card p {
+  margin-bottom: 12px;
+}
+
+
+.skill-card h3{
+  margin-bottom: 1rem;
 }
 
 .skill-card:hover,
 .project-card:hover,
-.contact-card:hover {
-  transform: translateY(-10px);
+.contact-card:hover { 
+  transform: translateY(-10px); 
 }
 
-.project-card p { margin-bottom: 12px; }
-.skill-card h3 { margin-bottom: 1rem; }
-
-/* About */
-.about-content p {
-  max-width: 800px;
+.about-content p { 
+  max-width: 800px; 
   margin: 0 auto 2rem auto;
-  font-size: 1.2rem;
-  text-align: center; /* Clean, modern look */
-  line-height: 1.8;
+  font-size: 1.2rem; 
+  text-align: left;        
+  line-height: 1.8;  
+  text-justify: inline;
 }
 
-/* Contact */
+/* Service Icons */
+.service-icon {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+/* Contact Specific */
 #contact {
+  text-align: center;
   background: var(--bg);
 }
 
-.contact-card iconify-icon { margin-bottom: 25px; }
-
-.contact-card h3 {
-  font-size: 1.6rem;
-  margin: 0 0 12px 0;
+.contact-card iconify-icon {
+  margin-bottom: 25px;
 }
 
-.contact-detail a { color: var(--accent); text-decoration: none; }
-.send-message { color: var(--secondary); font-size: 1rem; }
+.contact-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.6rem;
+  color: var(--text);
+}
 
+.contact-card .contact-detail,
+.contact-card .send-message {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: var(--text);
+}
+
+.contact-detail a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-detail a:hover {
+  text-decoration:none;
+}
+
+.send-message {
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+/* Contact Form */
 .contact-form-container {
   max-width: 700px;
-  margin: 5rem auto 2rem;
+  margin: 5rem auto 2rem auto;
 }
 
 .contact-form-container form {
@@ -243,20 +311,63 @@ body {
   box-shadow: 0 0 0 3px rgba(0, 255, 157, 0.2);
 }
 
+.submit-btn {
+  align-self: flex-start;
+  background: linear-gradient(to right, #294086, #332a4c);
+  color: #ffffff;
+  padding: 1.4rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+}
+
+  .btn:active,
+.submit-btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+    }
+
+@media (hover: hover) {
+  .btn:hover,
+  .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
+  }
+}
+  .btn:focus,
+.submit-btn:focus {
+  outline: none;
+  box-shadow: none !important;
+  transform: translateY(0) !important;
+}
+
+
 /* Footer */
 footer {
   text-align: center;
-  background: linear-gradient(to right, #294086, #332a4c);
   color: #100f0f;
   font-size: 1.2rem;
+  background: linear-gradient(to right, #294086, #332a4c);
   padding: 3.3rem 0;
 }
 
 .social-links {
-  margin: 2rem 0 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .social-links a {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -271,7 +382,10 @@ footer {
 .social-links a::before {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: #000;
   border-radius: 50%;
   z-index: -1;
@@ -279,12 +393,25 @@ footer {
 
 .social-links a:hover {
   transform: scale(1.1);
+  
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .hero-content p { font-size: 3.5rem; }
+  .hero-content h1 { font-size: 3rem; }
   .section h2 { font-size: 2.4rem; }
   .navbar { padding: 0.8rem 1.5rem; bottom: 15px; }
   .nav-links { gap: 2rem; }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
