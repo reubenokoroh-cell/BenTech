@@ -140,7 +140,6 @@ body {
   margin: 0.5rem;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: translateY(0);
   
 }
 
@@ -363,6 +362,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
