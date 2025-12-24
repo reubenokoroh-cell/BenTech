@@ -159,11 +159,7 @@ body {
     box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
   }
 }
-  .btn:focus,
-  .submit-btn:focus {
-  box-shadow: none;
-  transform: translateY(0);
-}
+
 
   
 /* Sections */
@@ -362,6 +358,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
