@@ -262,7 +262,7 @@ body {
 }
 
 .send-message {
-  color: var(--secondary);
+
   font-size: 1rem;
 }
 
@@ -360,6 +360,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
