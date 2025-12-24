@@ -129,12 +129,15 @@ body {
 .btn,
 .submit-btn {
   dislay: block;
-  width: 100%;
+  min-width:180px;
+  width: fit-content;
   max-width: 300px;
   margin: 0 auto;
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
   padding: 1.4rem 1.5rem;
+  font-size:1rem;
+  text-align: center;
   border-radius: 7px;
   text-decoration: none;
   font-weight: 600;
@@ -364,6 +367,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
