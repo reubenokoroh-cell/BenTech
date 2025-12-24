@@ -129,10 +129,6 @@ body {
 .btn,
 .submit-btn {
   dislay: block;
-  min-width:180px;
-  width: fit-content;
-  max-width: 300px;
-  margin: 0 auto;
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
   padding: 1.4rem 1.5rem;
@@ -327,6 +323,26 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+  .btn:active,
+.submit-btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+    }
+
+@media (hover: hover) {
+  .btn:hover,
+  .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
+  }
+}
+  .btn:focus,
+.submit-btn:focus {
+  outline: none;
+  box-shadow: none !important;
+  transform: translateY(0) !important;
+}
+
 
 
 
@@ -381,6 +397,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
