@@ -305,6 +305,7 @@ body {
 }
 
 .submit-btn {
+  display: block;
   align-self: flex-start;
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
@@ -314,7 +315,7 @@ body {
   border: none;
   border-radius: 7px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s;
   box-shadow: none;
   transform: translateY(0);
 }
@@ -372,6 +373,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
