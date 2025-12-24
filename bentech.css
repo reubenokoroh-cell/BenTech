@@ -216,10 +216,10 @@ body {
 
 .about-content p { 
   max-width: 800px; 
-  margin: 0 auto; 
+  margin: 0 auto 2rem auto;  /* Adds nice spacing between the two paragraphs */
   font-size: 1.2rem; 
-  text-align: justify;
-  text-justify: inner-word;
+  text-align: center;        /* Modern, clean look – change to 'left' if you prefer left-aligned */
+  line-height: 1.8;          /* Improves readability */
 }
 
 /* Service Icons */
@@ -359,6 +359,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
