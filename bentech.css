@@ -160,17 +160,11 @@ body {
     box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
   }
 }
-  .btn:focus,
-.submit-btn:focus {
+  .btn:focus {
   box-shadow: none;
   transform: translateY(0);
 }
 
-  .btn:not(:hover):not(:active):not(:focus),
-.submit-btn:not(:hover):not(:active):not(:focus) {
-  transform: translateY(0);
-  box-shadow: none;
-}
   
 /* Sections */
 .section {
@@ -368,6 +362,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
