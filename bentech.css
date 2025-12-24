@@ -326,30 +326,6 @@ body {
   transform: translateY(0);
 }
 
-.submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
-}
-
-  .btn:active,
-.submit-btn:active {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
-    }
-
-@media (hover: hover) {
-  .btn:hover,
-  .submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
-  }
-}
-  .btn:focus,
-.submit-btn:focus {
-  outline: none;
-  box-shadow: none !important;
-  transform: translateY(0) !important;
-}
 
 
 /* Footer */
@@ -403,6 +379,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
