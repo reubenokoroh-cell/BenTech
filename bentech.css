@@ -138,6 +138,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   margin: 0.5rem;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: none; /* Start with no shadow */
   transform: translateY(0);
@@ -314,22 +315,30 @@ body {
   align-self: flex-start;
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  padding: 1.4rem 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   border: none;
-  border-radius: 12px;
+  border-radius: 7px;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: none;
+  transform: translateY(0);
 }
 
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+}
 
+  .btn:active,
 .submit-btn:active {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
     }
 
 @media (hover: hover) {
+  .btn:hover,
   .submit-btn:hover {
     transform: translateY(-3px);
     box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
@@ -341,8 +350,6 @@ body {
   box-shadow: none !important;
   transform: translateY(0) !important;
 }
-
-
 
 
 /* Footer */
@@ -396,6 +403,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
