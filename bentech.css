@@ -38,7 +38,7 @@ body {
   position: fixed;
   gap: 0.8rem;
   display: flex;
-  margin-bottom:40px;
+
 }
 
 .nav-links {
@@ -155,8 +155,7 @@ body {
     }
 
 @media (hover: hover) {
-  .btn:hover,
-  .submit-btn:hover {
+  .btn:hover{
     transform: translateY(-3px);
     box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
   }
@@ -369,6 +368,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
