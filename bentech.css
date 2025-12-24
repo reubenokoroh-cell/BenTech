@@ -126,7 +126,8 @@ body {
   font-weight: 400;
 }
 
-.btn {
+.btn, 
+.submit-btn{
   background: linear-gradient(to right, #294086, #332a4c);
   color: #ffffff;
   padding: 1.4rem 1.5rem;
@@ -141,6 +142,10 @@ body {
   box-shadow: none; /* Start with no shadow */
   transform: translateY(0);
   
+}
+
+ .submit-btn {
+  align-self: flex-start;
 }
 
   .btn:active,
@@ -309,20 +314,7 @@ body {
   box-shadow: 0 0 0 3px rgba(0, 255, 157, 0.2);
 }
 
-.submit-btn {
-  align-self: flex-start;
-  background: linear-gradient(to right, #294086, #332a4c);
-  color: #ffffff;
-  padding: 1.4rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s;
-  box-shadow: none;
-  transform: translateY(0);
-}
+
 
 
 
@@ -377,6 +369,7 @@ footer {
   .nav-links { gap: 2rem; }
 
 }
+
 
 
 
