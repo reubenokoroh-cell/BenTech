@@ -147,7 +147,7 @@ body {
   background-color: #000e23;
   padding: 6rem 5%;
   text-align: center;
-  display: flex;
+
 }
 
 .section h2 { 
@@ -372,5 +372,6 @@ footer {
   .navbar { padding: 0.8rem 1.5rem; bottom: 15px; }
   .nav-links { gap: 2rem; }
 }
+
 
 
