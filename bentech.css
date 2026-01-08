@@ -1,384 +1,218 @@
-:root {
-  --bg: #080619;
-  --text: #ffffffdf;
-  --accent: #02b571;
-  --card: #161928;
-  --secondary: #888888;
-}
-
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  bottom: 3rem;
-  width: max-content;
-  display: block;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(31, 30, 30, 0.7);
-  backdrop-filter: blur(15px);
-  border-radius: 3rem;
-  z-index: 2;
-  padding: 0.7rem 1.7rem;
-  position: fixed;
-  gap: 0.8rem;
-  display: flex;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>BenTech</title>
+  <link rel="stylesheet" href="bentech.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+<body>
+  <section id="home"></section>
   
-}
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li>
+          <a href="#home" class="nav-link">
+            <iconify-icon icon="ant-design:home-outlined" width="23"></iconify-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link">
+            <iconify-icon icon="heroicons:user-20-solid" width="23"></iconify-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#services" class="nav-link">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" width="23" height="23" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 22h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3zM5 8V5c0-.805.55-.988 1-1h13v12H5V8z"></path>
+              <path d="M8 6h9v2H8z"></path>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio" class="nav-link">
+            <iconify-icon icon="mdi:folder-open" width="23"></iconify-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link">
+            <iconify-icon icon="mdi:message-text-outline" width="23"></iconify-icon>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-.nav-link {
-  color: var(--text);
-  opacity: 0.9;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  width: 30px;
-  height: 50px;
-}
+  <main> 
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+       <h2>Creative Problem Solver</h2>
+        <p><span class="ben">Ben</span><span class="tech">Tech</span></p>
+        <h3>Building Modern Web & Mobile Applications.</h3>
+        <a href="#portfolio" class="btn">View Our Work</a>
+      </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>About BenTech</h2>
+      <div class="about-content">
+       <p>BenTech is a creative development team dedicated to building
+         modern web and mobile applications that solve real-world
+         problems with simplicity and impact. We focus on delivering 
+         clean, user-friendly solutions that prioritize smooth 
+         functionality and reliable performance in every project.</p>
+        <br>
+      
+        <p> Our team thrives on collaboration, turning client ideas into
+          practical digital products through thoughtful design and careful
+          execution. With a deep commitment to quality and creativity,
+          we strive to create work that not only meets needs but also 
+           delights users and delivers lasting value.</p>
+      </div>
+      </section>
 
-.nav-link:hover {
- 
-  opacity: 1;
-  transform: scale(1.2);
-}
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <p>What We Offer</p>
+      <h2>Our Services</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="service-icon">
+            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="28" fill="#008f5a"/>
+              <text x="30" y="38" font-family="Arial, sans-serif" font-size="28" fill="#000" text-anchor="middle">&lt;&gt;</text>
+            </svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>Building high-performance <br> custom websites and web applications
+            <br> with modern technologies like React, Node.js, Tailwind 
+            <br>and more.</p>
+        </div>
+        <div class="skill-card">
+         <div class="service-icon">
+          <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="#008f5a"/>
+            <g transform="translate(18,18) scale(1.6)">
+              <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" fill="#000"/>
+              <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" fill="#000"/>
+            </g>
+          </svg>
+         </div>
+      
+          <h3>Mobile Apps</h3>
+          <p>Android and iOS applications 
+            crafted with React Native 
+            for <br>seamless cross-platform performance.</p>
+        </div>
+       
+      </div>
+    </section>
 
-.nav-link.active {
-  
-  opacity: 1;
-  transform: scale(1.2);
-}
+   <!-- Projects Section -->
+<section id="portfolio" class="section">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <a href="https://britest-fx.vercel.app" class="project-card" target="_blank">
+      <div class="project-image" style="background-image: url('images/Screenshot\ 2026-01-08\ 142142.png');"></div>
+      <div class="project-overlay">
+        <h3>Project One</h3>
+        <p>A model digital trading & sales of gadgets and dogs</p>
+        <span class="btn">View Project</span>
+      </div>
+    </a>
+    
+    <a href="#" class="project-card">
+      <div class="project-image" style="background-image: url('https://marketplace.canva.com/EAFNrNQag1c/2/0/1600w/canva-black-white-dark-futuristic-coming-soon-website-coming-soon-page-iyyKjFme70M.jpg');"></div>
+      <div class="project-overlay">
+        <h3>Project Two</h3>
+        <p>Web sites Available soon</p>
+        <span class="btn">View Project</span>
+      </div>
+    </a>
+  </div>
+</section>
 
+    <!-- Contact Section with Cards + Form -->
+    <section id="contact" class="section contact">
+      <p>Get in Touch</p>
+      <h2>Contact Us</h2>
 
-@media (max-width: 768px) {
-  .hero-content p {               /* Fixed selector from h1 to p (your hero title is <p>) */
-    font-size: 3.5rem; 
-  }
-  .section h2 { 
-    font-size: 2.4rem; 
-  }
-  
-}
-/* Hero */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-  padding-top: 10vh;
-  margin-top: 50px;
-  
-}
+      <!-- Contact Cards -->
+      <div class="contact-grid">
+        <div class="contact-card">
+          <iconify-icon icon="mdi:email-outline" width="60"></iconify-icon>
+          <h3>Email</h3>
+          <p class="contact-detail">
+            <a href="mailto:Reubenokoroh69@gmail.com">Reubenokoroh69@gmail.com</a>
+          </p>
+          <p class="send-message">Send a Message</p>
+        </div>
 
-.hero-content p { 
-  font-size: 4rem; 
-  margin-top: 1.2rem;
-  margin-bottom: 1.5rem;
-  font-weight:900;
-}
+        <div class="contact-card">
+          <iconify-icon icon="simple-icons:whatsapp" width="60"></iconify-icon>
+          <h3>WhatsApp</h3>
+          <p class="contact-detail">
+            <a href="https://wa.me/2348067532711" target="_blank">+2348067532711</a>
+          </p>
+          <p class="send-message">Chat on WhatsApp</p>
+        </div>
 
-.hero-content .ben {
-  color: #ffffff;
-  font-weight:inherit;
-}
+        <div class="contact-card">
+          <iconify-icon icon="mdi:facebook-messenger" width="60"></iconify-icon>
+          <h3>Messenger</h3>
+          <p class="contact-detail">
+            <a href="https://m.me/okoroh.reuben.3" target="_blank">Send a Message</a>
+          </p>
+          <p class="send-message">Message on Facebook</p>
+        </div>
+      </div>
 
-.hero-content .tech {
-  color: #02b571;
-  font-weight:inherit;
-}
+      <!-- Contact Form (after the cards) -->
+      <div class="contact-form-container">
+        <form action="#" method="POST"> 
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
 
-.hero-content h3 { 
-  margin-bottom: 3rem; 
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: #c6c6c6;
-  font-weight: 550;
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your email" required />
+          </div>
 
-  
-}
+          <div class="form-group">
+            <textarea id="message" name="message" rows="8" placeholder="Your message" required></textarea>
+          </div>
 
-.hero-content h2 {
- font-size: 20px;
-  color: #c6c6c6;
-  font-weight: 400;
-}
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-.btn {
- background: linear-gradient(to right, #294086, #332a4c);
-  color: #ffffff;
-  padding: 1.4rem 1.5rem;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-  
-}
+  <footer>
+    <h2>BenTech</h2>
+    <div class="social-links">
+      <a href="https://facebook.com/okoroh.reuben.3" target="_blank" aria-label="Facebook">
+        <iconify-icon icon="simple-icons:facebook" width="32"></iconify-icon>
+      </a>
+      <a href="https://x.com/itsabout_tyme" target="_blank" aria-label="X">
+        <iconify-icon icon="simple-icons:x" width="32"></iconify-icon>
+      </a>
+      <a href="https://instagram.com/bigty_yme" target="_blank" aria-label="Instagram">
+        <iconify-icon icon="simple-icons:instagram" width="32"></iconify-icon>
+      </a>
+    </div>
+    <p>© 2025 BenTech. All Rights Reserved.</p>
+  </footer>
 
-.btn:hover { 
-  transform: translateY(-3px); 
-  box-shadow: 0 10px 20px rgba(2, 207, 128, 0.3); 
-}
+  <script src="bentech.js"></script>
+</body>
 
-
-
-/* Sections */
-.section {
-  background-color: #000e23;
-  padding: 6rem 5%;
-  text-align: center;
-
-}
-
-.section h2 { 
-  font-size: 2.8rem; 
-  margin-bottom: 3rem; 
-}
-
-/* Grids */
-.skills-grid,
-.projects-grid,
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.skill-card,
-.project-card,
-.contact-card {
-  background: var(--card);
-  padding: 2rem;
-  border-radius: 12px;
-  transition: transform 0.3s;
-  
-}
-
-.project-card p {
-  margin-bottom: 12px;
-}
-
-
-.skill-card h3{
-  margin-bottom: 1rem;
-}
-
-.skill-card:hover,
-.project-card:hover,
-.contact-card:hover { 
-  transform: translateY(-10px); 
-}
-
-.about-content p { 
-  max-width: 800px; 
-  margin: 0 auto; 
-  font-size: 1.2rem; 
-  text-align: justify;
-}
-
-@media (max-width: 768px) {
-  .about-content p {
-    text-align:initial;
-  }
-}
-
-/* Service Icons */
-.service-icon {
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: center;
- 
-}
-
-/* Contact Specific */
-#contact {
-  text-align: center;
-  background: var(--bg);
-}
-
-.contact-card iconify-icon {
-  margin-bottom: 25px;
-}
-
-.contact-card h3 {
-  margin: 0 0 12px 0;
-  font-size: 1.6rem;
-  color: var(--text);
-}
-
-.contact-card .contact-detail,
-.contact-card .send-message {
-  font-size: 1.1rem;
-  margin: 8px 0;
-  color: var(--text);
-}
-
-.contact-detail a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.contact-detail a:hover {
-  text-decoration:none;
-}
-
-.send-message {
-  color: var(--secondary);
-  font-size: 1rem;
-}
-
-/* Contact Form */
-.contact-form-container {
-  max-width: 700px;
-  margin: 5rem auto 2rem auto;
-}
-
-.contact-form-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 1.2rem 1.5rem;
-  font-size: 1.1rem;
-  font-family: 'Inter', sans-serif;
-  background: var(--card);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  color: var(--text);
-  resize: vertical;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--secondary);
-  opacity: 0.8;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(0, 255, 157, 0.2);
-}
-
-.submit-btn {
-  align-self: flex-start;
-  background: linear-gradient(to right, #294086, #332a4c);
-  color: #ffffff;
-  padding: 1.4rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: none;
-  transform: translateY(0);
-}
-
-.submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
-}
-
-  
-.submit-btn:active {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
-    }
-
-@media (hover: hover) {
-
-  .submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow:0 10px 20px rgba(0, 255, 157, 0.3);
-  }
-}
-
-.submit-btn:focus {
-  outline: none;
-  box-shadow: none !important;
-  transform: translateY(0) !important;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  color: #100f0f;
-  font-size: 1.2rem;
-  background: linear-gradient(to right, #294086, #332a4c);
-  padding: 3.3rem 0;
-}
-
-.social-links {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-.social-links a {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  margin: 0 1rem;
-  color: white;
-  text-decoration: none;
-  transition: transform 0.3s;
-}
-
-.social-links a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  border-radius: 50%;
-  z-index: -1;
-}
-
-.social-links a:hover {
-  transform: scale(1.1);
-  
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 { font-size: 3rem; }
-  .section h2 { font-size: 2.4rem; }
-  .navbar { padding: 0.8rem 1.5rem; bottom: 15px; }
-  .nav-links { gap: 2rem; }
-}
-
-
-
+</html>
 
