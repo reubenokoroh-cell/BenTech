@@ -209,53 +209,75 @@ body {
 
 
 .project-card {
-  position: relative;
-  height: 380px;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  cursor: pointer;
+  position: relative;
 }
 
-.project-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 25px 50px rgba(2, 181, 113, 0.25);
+.project-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px; /* adjust as needed */
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease; /* optional slight zoom */
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* subtle zoom, optional */
 }
 
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  color: white;
+  transition: opacity 0.3s ease;
 }
 
 .project-card:hover .project-overlay {
   opacity: 1;
 }
 
+.project-overlay h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-overlay p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
 .view-btn {
   display: inline-block;
-  padding: 0.9rem 2rem;
+  padding: 0.8rem 1.8rem;
   background: var(--accent);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .view-btn:hover {
   background: #01d47e;
-  transform: translateY(-4px);
 }
+
 
 
 
@@ -456,6 +478,7 @@ footer {
   .navbar { padding: 0.8rem 1.5rem; bottom: 15px; }
   .nav-links { gap: 2rem; }
 }
+
 
 
 
