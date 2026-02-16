@@ -233,7 +233,9 @@ body {
   background-size: cover;
   background-position: center;
   transition: transform 0.5s ease;
-  object-fit: cover;
+  background-image: url("/images/screenshot.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .project-card:hover .project-image {
@@ -480,6 +482,7 @@ footer {
   .navbar { padding: 0.8rem 1.5rem; bottom: 15px; }
   .nav-links { gap: 2rem; }
 }
+
 
 
 
