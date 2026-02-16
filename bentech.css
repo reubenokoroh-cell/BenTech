@@ -238,6 +238,18 @@ body {
   background-position: center;
 }
 
+.project-card {
+  min-height: 380px;
+}
+
+.project-image {
+  min-height: 380px;
+}
+.project-image {
+  background-color: red;
+}
+
+
 .project-card:hover .project-image {
   transform: scale(1.12);
 }
@@ -482,6 +494,7 @@ footer {
   .navbar { padding: 0.8rem 1.5rem; bottom: 15px; }
   .nav-links { gap: 2rem; }
 }
+
 
 
 
