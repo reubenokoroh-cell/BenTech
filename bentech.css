@@ -213,33 +213,14 @@ body {
   height: 380px;
   border-radius: 16px;
   overflow: hidden;
-  display: block;
   text-decoration: none;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-card:hover {
   transform: translateY(-15px);
   box-shadow: 0 25px 50px rgba(2, 181, 113, 0.25);
-}
-
-
-.project-image {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-  object-fit: cover;   
-  display: block;
-}
-
-
-.project-card:hover .project-image {
-  transform: scale(1.12);
 }
 
 .project-overlay {
@@ -261,28 +242,21 @@ body {
   opacity: 1;
 }
 
-.project-overlay h3 {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.project-overlay p {
-  font-size: 1.2rem;
-  max-width: 85%;
-  margin-bottom: 1.8rem;
-}
-
-.project-overlay .btn {
-  background: var(--accent);
+.view-btn {
+  display: inline-block;
   padding: 0.9rem 2rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s;
 }
 
-.project-overlay .btn:hover {
+.view-btn:hover {
   background: #01d47e;
   transform: translateY(-4px);
 }
+
 
 
 
